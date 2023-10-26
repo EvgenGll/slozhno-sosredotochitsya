@@ -1,20 +1,30 @@
 
 .page.theme_light {
   background-image: url(../images/cover-image-light.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   --bg-color: #353430;
   --text-color: #353430;
   --accent-color: #ff8dcb;
   --hover-color: #ff007040;
   --secondary-color: #FFC2E6;
+  --navigation-color: var(--black-color);
+  --decor-color: var(--transparent-color);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     background-image: url(../images/cover-image-light.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     --bg-color: #353430;
     --text-color: #353430;
     --accent-color: #ff8dcb;
     --hover-color: #ff007040;
     --secondary-color: #FFC2E6;
-  }
+    --navigation-color: var(--black-color);
+    --decor-color: var(--transparent-color);
+}
 }

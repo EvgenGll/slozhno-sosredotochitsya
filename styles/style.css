@@ -2,9 +2,8 @@
 
 .page {
   margin: 0;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--background-image);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--main-font);
@@ -30,7 +29,7 @@
 }
 
 .header__theme-menu-item {
-  color: var(--accent-color, #ff0070);
+  color: var(--navigation-color);
   font-size: 18px;
   font-family: var(--main-font);
   font-style: normal;
@@ -74,8 +73,8 @@
   z-index: 1;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--navigation-color);
+  border-block-start: 1px solid var(--navigation-color);
   inset-inline-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
@@ -86,8 +85,8 @@
   z-index: 1;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--navigation-color);
+  border-block-end: 1px solid var(--navigation-color);
   inset-inline-start: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
   inset-block-end: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
 }
@@ -104,7 +103,7 @@
 
 .rec-decor::before {
   content: "REC";
-  color: var(--accent-color, #ff0070);
+  color: var(--decor-color);
   line-height: 24px;
 }
 
@@ -112,11 +111,11 @@
   content: "";
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 4px var(--accent-color, #ff0070);
-  background: var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px var(--decor-color);
+  background: var(--decor-color);
   inline-size: 9px;
   block-size: 9px;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--decor-color);
 }
 
 .page__title {
@@ -144,7 +143,7 @@
 }
 
 .title {
-  color: var(--accent-color, #ff0070);
+  color: var(--navigation-color);
   font-weight: 700;
   font-size: inherit;
   line-height: inherit;
@@ -171,7 +170,6 @@
 .section-content {
   display: grid;
   gap: 10px;
-  margin-block-start: 50px;
 }
 
 .article {
@@ -217,7 +215,7 @@ a:focus-visible {
 .cover {
   display: grid;
   padding: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
-  min-block-size: 100lvh;
+  min-block-size: 100vh;
 }
 
 .main {
@@ -246,16 +244,42 @@ a:focus-visible {
 
 .header__description {
   justify-self: end;
-  inline-size: clamp(364px, 50%, 491px);
-
+  inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
 }
 
 .header__theme-menu {
-  margin-block-start: 174px;
+  margin-block-start: 180px;
 }
 
 .content-list {
   display: grid;
+  gap: 20px;
+  grid-template-rows: repeat(3, minmax(min-content, max-content));
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  grid-template-areas: 
+  "a a b"
+  "c d b"
+  "c e e";
+}
+
+.image-item-1 {
+  grid-area: a;
+}
+
+.image-item-2 {
+  grid-area: b;
+}
+
+.image-item-3 {
+  grid-area: c;
+}
+
+.image-item-4 {
+  grid-area: d;
+}
+
+.image-item-5 {
+  grid-area: e;
 }
 
 .section-why {
@@ -263,15 +287,27 @@ a:focus-visible {
   grid-template-columns: 236px auto;
 }
 
-.section-how__article-list {
+.title-what {
+  max-inline-size: 236px;
+}
+
+.section-how {
   display: grid;
   grid-template-columns: 236px auto;
+}
+
+.section-how__title {
+  max-block-size: 23px;
+}
+
+.section-how__article-list {
+  grid-column-start: 2;
+  margin-block-start: -70px;
 }
 
 .section-content {
   display: grid;
   gap: 20px;
-  margin-block-start: 79px;
 }
 
 .main {
@@ -286,15 +322,40 @@ a:focus-visible {
   grid-template-columns: repeat(3, 1fr);
 }
 
-
 .header__theme-menu {
   display: flex;
   justify-self: center;
   align-self: start;
+  margin-block-start: 0;
+  margin-block-end: 273px;
+  margin-inline-start: 18px;
+  gap: 23px;
   }
 
 .header__theme-menu-list {
     flex-direction: row;
   }
+  
+  .header__description {
+    margin-block: 112px;
+  }
 
+  .section-why {
+    display: grid;
+    grid-template-columns: 315px auto;
+  }
+
+  .section-how {
+    display: grid;
+    grid-template-columns: 315px auto;
+  }
+
+  .title-what {
+    max-inline-size: 315px;
+  }
+
+  .section-how__article-list {
+    grid-column-start: 2;
+    margin-block-start: -47px;
+  }
 }

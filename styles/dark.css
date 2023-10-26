@@ -5,23 +5,31 @@
 */
 
 .page.theme_dark {
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   --bg-color: #000028;
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --hover-color: #ff007040;
   --secondary-color: #DB00FF;
-  background-image: url(../images/cover-image-dark.png);
+  --navigation-color: var(--pink-color);
+  --decor-color: #ff0070;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
+    background-image: url(../images/cover-image-dark.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     --bg-color: #000028;
     --text-color: #f1b2ce;
     --accent-color: #ff0070;
     --hover-color: #ff007040;
     --secondary-color: #DB00FF;
-    background-image: url(../images/cover-image-dark.png);
-  }
+    --navigation-color: var(--pink-color);
+    --decor-color: #ff0070;
+}
 }
