@@ -6,30 +6,18 @@
 
 .page.theme_dark {
   background-image: url(../images/cover-image-dark.png);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  --bg-color: #000028;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --hover-color: #ff007040;
-  --secondary-color: #DB00FF;
+  --bg-color: var(--black-color-1);
+  --text-color: var(--pink-color-1);
+  --accent-color: var(--pink-color);
+  --hover-color: var(--brand-color);
+  --secondary-color: var(--purple-pink);
   --navigation-color: var(--pink-color);
-  --decor-color: #ff0070;
+  --decor-color: var(--pink-color);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     background-image: url(../images/cover-image-dark.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    --bg-color: #000028;
-    --text-color: #f1b2ce;
-    --accent-color: #ff0070;
-    --hover-color: #ff007040;
-    --secondary-color: #DB00FF;
-    --navigation-color: var(--pink-color);
-    --decor-color: #ff0070;
+
 }
 }
