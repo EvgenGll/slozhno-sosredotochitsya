@@ -2,6 +2,7 @@
 .page.theme_light {
   background-image: url(../images/cover-image-light.png);
   --bg-color: var(--black-color-2);
+  --background-color: var(--pink-color-4);
   --text-color: var(--black-color-2);
   --accent-color: var(--pink-color-2);
   --hover-color: var(--brand-color);
@@ -14,6 +15,7 @@
   :root {
     background-image: url(../images/cover-image-light.png);
     --bg-color: var(--black-color-2);
+    --background-color: var(--pink-color-4);
     --text-color: var(--black-color-2);
     --accent-color: var(--pink-color-2);
     --hover-color: var(--brand-color);
