@@ -26,4 +26,8 @@
     --navigation-color: var(--pink-color);
     --decor-color: var(--pink-color);
 }
+
+.page.theme_auto {
+  background-image: url(../images/cover-image-dark.png);
+}
 }

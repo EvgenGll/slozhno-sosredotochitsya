@@ -21,4 +21,8 @@
     --navigation-color: var(--black-color);
     --decor-color: var(--transparent-color);
 }
+
+.page.theme_auto {
+  background-image: url(../images/cover-image-light.png);
+}
 }
