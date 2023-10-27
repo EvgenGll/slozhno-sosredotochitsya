@@ -18,6 +18,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     background-image: url(../images/cover-image-dark.png);
-
+    --bg-color: var(--black-color-1);
+    --text-color: var(--pink-color-1);
+    --accent-color: var(--pink-color);
+    --hover-color: var(--brand-color);
+    --secondary-color: var(--purple-pink);
+    --navigation-color: var(--pink-color);
+    --decor-color: var(--pink-color);
 }
 }
